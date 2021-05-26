@@ -1,0 +1,1 @@
+SELECT ${key1} FROM ${key2} WHERE ${key3} = 100;
