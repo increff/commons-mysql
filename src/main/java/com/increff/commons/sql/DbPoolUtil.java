@@ -19,7 +19,7 @@ import org.apache.commons.dbcp2.BasicDataSource;
 public class DbPoolUtil {
 
     /**
-     * In general, 0 < minIdle < maxIdle < maxTotal
+     * In general, 0 less than minIdle less than maxIdle less than maxTotal
      * Anything between maxIdle and maxTotal gets deleted automatically
      * To delete connections between minIdle and maxIdle, there are multiple eviction configuration
      * We want to avoid that confusion and just have a min and max connection
