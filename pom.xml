@@ -17,7 +17,7 @@
 
 	<groupId>com.increff.commons</groupId>
 	<artifactId>commons-mysql</artifactId>
-	<version>1.5</version>
+	<version>1.6-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>commons-sql</name>
@@ -211,7 +211,7 @@
 		<connection>scm:git:git://github.com/increff/commons-mysql.git</connection>
 		<developerConnection>scm:git:git@github.com:increff/commons-mysql.git</developerConnection>
 		<url>https://github.com/increff/commons-mysql</url>
-		<tag>rel-commons-mysql-1.5</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<licenses>
