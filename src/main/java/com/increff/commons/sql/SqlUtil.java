@@ -62,14 +62,15 @@ public class SqlUtil {
 
 	public String[] getImportCmd(String filePath, String columns) {
 		String lineSeparator = "\n";
+		String fieldSeparator = "\t";
 
 		if (OperatingSystem.getOs() == OperatingSystem.windows) {
 			filePath = "\"" + filePath + "\"";
 			lineSeparator = "\r\n";
 		}
-		return new String[] { "mysqlimport", "--host=" + host, "--user=" + username, "--password=" + password,
-				"--local", "--replace", "--ignore-lines=1", "--lines-terminated-by=" + lineSeparator,
-				"--columns=" + columns, schema, filePath };
+		String[] s = {"mysql", "--host=localhost","--user=increff", "--password=1234", "-e",
+			"LOAD DATA LOCAL INFILE  '" +filePath+ "'  INTO TABLE `"+schema+"`."+getTableName(filePath)+"  FIELDS TERMINATED BY '"+fieldSeparator+"' LINES TERMINATED BY '"+lineSeparator+"' IGNORE 1 LINES ("+columns+")"};
+		return s;
 	}
 
 	/**
@@ -90,5 +91,10 @@ public class SqlUtil {
 	public String[] getTruncateCmd(String tableName) {
 		String query = "truncate table " + tableName;
 		return getQueryCmd(query);
+	}
+	private String getTableName(String filePath) {
+		int slashIndex = filePath.lastIndexOf('/');
+		int dotIndex = filePath.lastIndexOf('.');
+		return filePath.substring(slashIndex + 1, dotIndex);
 	}
 }
