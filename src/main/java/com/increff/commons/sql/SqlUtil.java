@@ -68,8 +68,8 @@ public class SqlUtil {
 			filePath = "\"" + filePath + "\"";
 			lineSeparator = "\r\n";
 		}
-		return new String[] {"mysql", "--host="+host,"--user="+username, "--password="+password, "-e",
-			"LOAD DATA LOCAL INFILE  '" + filePath + "'  INTO TABLE `"+schema+"`." + getTableName(filePath) + "  FIELDS TERMINATED BY '" + fieldSeparator + "' LINES TERMINATED BY '" + lineSeparator + "' IGNORE 1 LINES (" + columns + ")"};
+		return new String[] {"mysql", "--host=" + host, "--user=" + username, "--password=" + password, "-e",
+			"LOAD DATA LOCAL INFILE  '" + filePath + "'  INTO TABLE `" + schema + "`." + getTableName(filePath) + "  FIELDS TERMINATED BY '" + fieldSeparator + "' LINES TERMINATED BY '" + lineSeparator + "' IGNORE 1 LINES (" + columns + ")"};
 	}
 
 	/**
