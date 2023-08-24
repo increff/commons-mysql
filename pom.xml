@@ -17,7 +17,7 @@
 
 	<groupId>com.increff.commons</groupId>
 	<artifactId>commons-mysql</artifactId>
-	<version>1.6-SNAPSHOT</version>
+	<version>1.6</version>
 	<packaging>jar</packaging>
 
 	<name>commons-sql</name>
