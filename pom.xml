@@ -208,8 +208,8 @@
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git:git://github.com/increff/commons-mysql.git</connection>
-		<developerConnection>scm:git:git@github.com:increff/commons-mysql.git</developerConnection>
+		<connection>scm:git:https://github.com/increff/commons-mysql.git</connection>
+		<developerConnection>scm:git:https://github.com/increff/commons-mysql.git</developerConnection>
 		<url>https://github.com/increff/commons-mysql</url>
 		<tag>HEAD</tag>
 	</scm>
