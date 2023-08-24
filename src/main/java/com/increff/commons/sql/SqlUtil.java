@@ -14,6 +14,8 @@
 
 package com.increff.commons.sql;
 
+import java.io.File;
+
 public class SqlUtil {
 
 	private String host;
@@ -92,7 +94,7 @@ public class SqlUtil {
 		return getQueryCmd(query);
 	}
 	private String getTableName(String filePath) {
-		int slashIndex = filePath.lastIndexOf('/');
+		int slashIndex = filePath.lastIndexOf(File.separator);
 		int dotIndex = filePath.lastIndexOf('.');
 		return filePath.substring(slashIndex + 1, dotIndex);
 	}
