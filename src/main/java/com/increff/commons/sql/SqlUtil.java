@@ -93,6 +93,7 @@ public class SqlUtil {
 		String query = "truncate table " + tableName;
 		return getQueryCmd(query);
 	}
+
 	private String getTableName(String filePath) {
 		int slashIndex = filePath.lastIndexOf(File.separator);
 		int dotIndex = filePath.lastIndexOf('.');
